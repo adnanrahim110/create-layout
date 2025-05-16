@@ -1,6 +1,6 @@
 {
   "name": "jsx-layout",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Interactive CLI to scaffold React component folders & .jsx files under src/",
   "main": "index.js",
   "bin": {
