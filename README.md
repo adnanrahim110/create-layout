@@ -1,6 +1,6 @@
-# create-layout
+# create-react-jsx-layout
 
-Interactive CLI tool to scaffold React component directories and `.jsx` files under your `src/` folder. `create-layout` makes project setup lightning-fast by guiding you through a dynamic folder/file tree builder right in your terminal.
+Interactive CLI tool to scaffold React component directories and `.jsx` files under your `src/` folder. `create-react-jsx-layout` makes project setup lightning-fast by guiding you through a dynamic folder/file tree builder right in your terminal.
 
 ---
 
@@ -25,10 +25,10 @@ Interactive CLI tool to scaffold React component directories and `.jsx` files un
 Install globally from npm:
 
 ```bash
-npm install -g create-layout
+npm install -g create-react-jsx-layout
 ```
 
-Once installed, the `create-layout` command becomes available in any project folder.
+Once installed, the `create-react-jsx-layout` command becomes available in any project folder.
 
 ---
 
@@ -43,7 +43,7 @@ Once installed, the `create-layout` command becomes available in any project fol
 2. **Run** the scaffolder:
 
    ```bash
-   create-layout
+   create-react-jsx-layout
    ```
 
 3. **Follow the prompts**:
@@ -57,7 +57,7 @@ Once installed, the `create-layout` command becomes available in any project fol
 ### Example Session
 
 ```bash
-$ create-layout
+$ create-react-jsx-layout
 
 🚀 Starting React scaffolding...
 
@@ -89,18 +89,7 @@ src/components/ui ➡ Choose action:
     📄 Add Component
   › ✅ Done
 
-src/components ➡ Choose action:
-    📁 Add Folder
-  › 📄 Add Component
-    ✅ Done
-
-Enter component name: Header
-📄 Component file created: src/components/Header.jsx
-
-src/components ➡ Choose action:
-    📁 Add Folder
-    📄 Add Component
-  › ✅ Done
+… (and so on) …
 
 🎉 Scaffolding completed successfully!
 ```
@@ -110,7 +99,7 @@ src/components ➡ Choose action:
 ## Uninstall
 
 ```bash
-npm uninstall -g create-layout
+npm uninstall -g create-react-jsx-layout
 ```
 
 ---
@@ -134,3 +123,5 @@ Feel free to connect:
 ---
 
 © 2025 Adnan Rahim. MIT License.
+
+<small>**Disclaimer:** This tool leverages open-source packages like [chalk](https://github.com/chalk/chalk) and [inquirer](https://github.com/SBoudrias/Inquirer.js) under their respective licenses—feel free to explore these projects for powerful CLI styling and interactive prompts!</small>
