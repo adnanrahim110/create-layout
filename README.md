@@ -1,6 +1,6 @@
-# create-react-jsx-layout
+# jsx-layout
 
-Interactive CLI tool to scaffold React component directories and `.jsx` files under your `src/` folder. `create-react-jsx-layout` makes project setup lightning-fast by guiding you through a dynamic folder/file tree builder right in your terminal.
+Interactive CLI tool to scaffold React component directories and `.jsx` files under your `src/` folder. `jsx-layout` makes project setup lightning-fast by guiding you through a dynamic folder/file tree builder right in your terminal.
 
 ---
 
@@ -25,10 +25,12 @@ Interactive CLI tool to scaffold React component directories and `.jsx` files un
 Install globally from npm:
 
 ```bash
-npm install -g create-react-jsx-layout
+npm install -g jsx-layout
 ```
 
-Once installed, the `create-react-jsx-layout` command becomes available in any project folder.
+[![npm version](https://badge.fury.io/js/jsx-layout.svg)](https://www.npmjs.com/package/jsx-layout)
+
+Once installed, the `jsx-layout` command becomes available in any project folder.
 
 ---
 
@@ -43,7 +45,7 @@ Once installed, the `create-react-jsx-layout` command becomes available in any p
 2. **Run** the scaffolder:
 
    ```bash
-   create-react-jsx-layout
+   jsx-layout
    ```
 
 3. **Follow the prompts**:
@@ -57,7 +59,7 @@ Once installed, the `create-react-jsx-layout` command becomes available in any p
 ### Example Session
 
 ```bash
-$ create-react-jsx-layout
+$ jsx-layout
 
 🚀 Starting React scaffolding...
 
@@ -99,7 +101,7 @@ src/components/ui ➡ Choose action:
 ## Uninstall
 
 ```bash
-npm uninstall -g create-react-jsx-layout
+npm uninstall -g jsx-layout
 ```
 
 ---
