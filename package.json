@@ -1,0 +1,37 @@
+{
+  "name": "create-layout",
+  "version": "1.0.0",
+  "description": "Interactive CLI to scaffold React component folders & .jsx files under src/",
+  "main": "index.js",
+  "bin": {
+    "create-layout": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "npm run lint",
+    "lint": "echo \"No lint configured\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/create-layout.git"
+  },
+  "keywords": [
+    "react",
+    "cli",
+    "scaffold",
+    "components",
+    "javascript"
+  ],
+  "author": "Adnan Rahim <adnankaka.786110@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "inquirer": "^12.6.1"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
