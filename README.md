@@ -113,7 +113,7 @@ npm uninstall -g create-react-jsx-layout
 - 🎓 Pursuing **B.Sc. in Artificial Intelligence** at KIET University, Karachi.
 - 💻 Completed **Web Development** program at Aptech Learning Institute (2021–23).
 - 🏢 Currently at Atraa Technologies as a Full-Stack Developer, building engaging UIs and robust backends.
-- 🛠️ Proficient in HTML/CSS, Bootstrap, Tailwind CSS, JavaScript, React.js, GSAP, PHP/MySQLi, and UI/UX tools like Figma & Adobe XD.
+- 🛠️ Proficient in HTML/CSS, Bootstrap, Tailwind CSS, JavaScript, React.js, Node.js, Express.js, MongoDb, GSAP, PHP/MySQLi, and UI/UX tools like Figma & Adobe XD.
 
 Feel free to connect:
 
