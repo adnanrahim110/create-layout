@@ -10,8 +10,21 @@ const prompt = inquirer.createPromptModule();
 const baseDir = process.cwd();
 const srcDir = path.join(baseDir, "src");
 
+// will be set to 'jsx' or 'tsx' based on user choice
+let fileExt = "jsx";
+
 function getBoilerplate(componentName) {
-  return `import React from "react";
+  if (fileExt === "tsx") {
+    return `import React from "react";
+
+const ${componentName}: React.FC = () => {
+  return <div></div>;
+};
+
+export default ${componentName};
+`;
+  } else {
+    return `import React from "react";
 
 const ${componentName} = () => {
   return <div></div>;
@@ -19,6 +32,7 @@ const ${componentName} = () => {
 
 export default ${componentName};
 `;
+  }
 }
 
 function ensureDir(dirPath) {
@@ -52,9 +66,13 @@ function createFile(filePath, componentName) {
 }
 
 function sanitizeFileName(raw) {
-  let name = raw.trim().replace(/\.jsx$/i, "");
+  let name = raw.trim();
+  // strip any trailing .jsx/.tsx the user might have typed
+  const regex = new RegExp(`\\.${fileExt}$`, "i");
+  name = name.replace(regex, "");
+  // capitalize first letter
   name = name.charAt(0).toUpperCase() + name.slice(1);
-  return `${name}.jsx`;
+  return `${name}.${fileExt}`;
 }
 
 async function buildTree(currentPath) {
@@ -62,7 +80,8 @@ async function buildTree(currentPath) {
     const { choice } = await prompt({
       type: "list",
       name: "choice",
-      message: chalk.cyan(path.relative(baseDir, currentPath) + " ➡ Choose action:"),
+      message:
+        chalk.cyan(path.relative(baseDir, currentPath)) + " ➡ Choose action:",
       choices: [
         { name: "📁 Add Folder", value: "folder" },
         { name: "📄 Add Component", value: "file" },
@@ -77,29 +96,56 @@ async function buildTree(currentPath) {
         type: "input",
         name: "folderName",
         message: chalk.blue("Enter new folder name:"),
-        validate: v => v.trim() ? true : "Name cannot be empty"
+        validate: v => (v.trim() ? true : "Name cannot be empty")
       });
       const newDir = path.join(currentPath, folderName.trim());
       ensureDir(newDir);
       await buildTree(newDir);
 
     } else {
-      const { rawName } = await prompt({
+      // accept multiple comma-separated component names
+      const { rawNames } = await prompt({
         type: "input",
-        name: "rawName",
-        message: chalk.blue("Enter component name:"),
-        validate: v => v.trim() ? true : "Name cannot be empty"
+        name: "rawNames",
+        message: chalk.blue(
+          "Enter component name(s) (comma-separated):"
+        ),
+        validate: v => (v.trim() ? true : "Name cannot be empty")
       });
-      const filename = sanitizeFileName(rawName);
-      const componentName = filename.replace(/\.jsx$/, "");
-      const filePath = path.join(currentPath, filename);
-      createFile(filePath, componentName);
+
+      rawNames
+        .split(",")
+        .map(n => n.trim())
+        .filter(n => n.length > 0)
+        .forEach(rawName => {
+          const filename = sanitizeFileName(rawName);
+          const componentName = filename.replace(
+            new RegExp(`\\.${fileExt}$`),
+            ""
+          );
+          const filePath = path.join(currentPath, filename);
+          createFile(filePath, componentName);
+        });
     }
   }
 }
 
 (async () => {
   console.log(chalk.blue.bold("\n🚀 Starting React scaffolding...\n"));
+
+  // ask once whether to scaffold JSX or TSX
+  const { language } = await prompt({
+    type: "list",
+    name: "language",
+    message: chalk.blue("Select language:"),
+    choices: [
+      { name: "JavaScript (JSX)", value: "jsx" },
+      { name: "TypeScript (TSX)", value: "tsx" }
+    ],
+    default: "jsx"
+  });
+  fileExt = language;
+
   ensureDir(srcDir);
 
   const { root } = await prompt({
@@ -107,7 +153,7 @@ async function buildTree(currentPath) {
     name: "root",
     message: chalk.blue("Specify root folder under src/:"),
     default: "components",
-    validate: v => v.trim() ? true : "Name cannot be empty"
+    validate: v => (v.trim() ? true : "Name cannot be empty")
   });
 
   const rootPath = path.join(srcDir, root.trim());

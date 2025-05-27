@@ -1,22 +1,23 @@
-# create-react-jsx-layout
+# create-react-layout
 
-Interactive CLI tool to scaffold React component directories and `.jsx` files under your `src/` folder. `create-react-jsx-layout` makes project setup lightning-fast by guiding you through a dynamic folder/file tree builder right in your terminal.
+Interactive CLI tool to scaffold React component directories and `.jsx`/`.tsx` files under your `src/` folder. `create-react-layout` makes project setup lightning-fast by guiding you through a dynamic folder/file tree builder right in your terminal.
 
 ---
 
 ## Features
 
 - **Dynamic Folder & File Creation**: Recursively add as many subfolders and components as you need.
-- **Smart File Naming**: Enter component names in any case or with/without `.jsx`; the CLI normalizes to `PascalCase.jsx`.
+- **Smart File Naming**: Enter component names in any case or with/without `.jsx`/`.tsx`; the CLI normalizes to `PascalCase.jsx` or `PascalCase.tsx`.
+- **JavaScript & TypeScript Support**: Choose between JSX and TSX output at startup.
 - **Safety Checks**: Skips existing directories or files without overwriting.
-- **Colorized Console Output**: Clear, professional messages with distinct colors for creation vs. skips.
+- **Colorized Console Output**: Clear, professional messages with distinct colors for creations vs. skips.
 
 ---
 
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) v14 or higher
-- npm (comes bundled with Node.js)
+- npm (bundled with Node.js)
 
 ---
 
@@ -25,71 +26,66 @@ Interactive CLI tool to scaffold React component directories and `.jsx` files un
 Install globally from npm:
 
 ```bash
-npm install -g jsx-layout
+npm install -g create-react-layout
 ```
-
-[![npm version](https://badge.fury.io/js/jsx-layout.svg)](https://www.npmjs.com/package/jsx-layout)
-
-Once installed, the `create-layout` command (from the `jsx-layout` package) becomes available in any project folder.
 
 ---
 
 ## Usage
 
-1. **Navigate** to the root of your React project:
+Navigate to your React project root:
 
-   ```bash
-   cd path/to/your-project
-   ```
+```bash
+cd path/to/your-project
+```
 
-2. **Run** the scaffolder:
+Run the scaffolder:
 
-   ```bash
-   create-layout
-   ```
+```bash
+create-react-layout
+```
 
-3. **Follow the prompts**:
+Follow the prompts:
 
-   - Specify the **root folder** under `src/` (default: `components`).
-   - At each level, choose to **add a folder**, **add a component**, or **finish**.
-   - Enter names for folders or components when prompted.
+1. Select language: JavaScript (JSX) or TypeScript (TSX).
+2. Specify root folder under `src/` (default: `components`).
+3. At each level, choose to add a folder, add a component, or finish.
+4. Enter names for folders or components (comma-separated supported).
 
-4. **Result**: Your `src/` directory will mirror your interactive choices, with `.jsx` files populated by a standard React boilerplate.
+Result: A mirrored folder structure under `src/` with `.jsx` or `.tsx` components populated by a standard React boilerplate.
+
+---
 
 ### Example Session
 
 ```bash
-$ create-layout
+$ create-react-layout
 
 🚀 Starting React scaffolding...
 
-📂 Directory exists, skipping: src
+? Select language:
+  ❯ JavaScript (JSX)
+    TypeScript (TSX)
 
-Root folder under src/: components
+? Specify root folder under src/: (components)
 📂 Directory created: src/components
 
 src/components ➡ Choose action:
-  › 📁 Add Folder
-    📄 Add Component
-    ✅ Done
+❯ 📁 Add Folder
+  📄 Add Component
+  ✅ Done
 
-# (Select "Add Folder")
-Enter new folder name: ui
+? Enter new folder name: ui
 📂 Directory created: src/components/ui
 
 src/components/ui ➡ Choose action:
-    📁 Add Folder
-  › 📄 Add Component
-    ✅ Done
+  📁 Add Folder
+❯ 📄 Add Component
+  ✅ Done
 
-# (Select "Add Component")
-Enter component name: button
+? Enter component name(s) (comma-separated): button, card
 📄 Component file created: src/components/ui/Button.jsx
-
-src/components/ui ➡ Choose action:
-    📁 Add Folder
-    📄 Add Component
-  › ✅ Done
+📄 Component file created: src/components/ui/Card.jsx
 
 … (and so on) …
 
@@ -98,32 +94,27 @@ src/components/ui ➡ Choose action:
 
 ---
 
-## Uninstall
+### Uninstall
 
 ```bash
-npm uninstall -g create-react-jsx-layout
+npm uninstall -g create-react-layout
 ```
 
 ---
 
 ## About Me
 
-**Adnan Rahim** — Full Stack Web Developer & AI Enthusiast
+**Adnan Rahim** — Full-Stack Web Developer & AI Enthusiast
 
-- 🎓 Pursuing **B.Sc. in Artificial Intelligence** at KIET University, Karachi.
-- 💻 Completed **Web Development** program at Aptech Learning Institute (2021–23).
-- 🏢 Currently at Atraa Technologies as a Full-Stack Developer, building engaging UIs and robust backends.
-- 🛠️ Proficient in HTML/CSS, Bootstrap, Tailwind CSS, JavaScript, React.js, Node.js, Express.js, MongoDb, GSAP, PHP/MySQLi, and UI/UX tools like Figma & Adobe XD.
+🎓 B.Sc. in Artificial Intelligence @ KIET University, Karachi
+💻 Web Development @ Aptech Learning Institute (2021–23)
+🏢 Full-Stack Developer @ Atraa Technologies
 
-Feel free to connect:
+**Connect:**
 
-- 📧 [adnankaka.786110@gmail.com](mailto:adnankaka.786110@gmail.com)
-- 🌐 [GitHub](https://github.com/adnanrahim110)
-- 🔗 [LinkedIn](https://www.linkedin.com/in/adnanrahim110)
-- 📸 [Instagram](https://www.instagram.com/_.adnan._110/)
+📧 adnankaka.786110@gmail.com
+🌐 GitHub
+🔗 LinkedIn
+📸 Instagram
 
----
-
-© 2025 Adnan Rahim. MIT License.
-
-<small>**Disclaimer:** This tool leverages open-source packages like [chalk](https://github.com/chalk/chalk) and [inquirer](https://github.com/SBoudrias/Inquirer.js) under their respective licenses—feel free to explore these projects for powerful CLI styling and interactive prompts!</small>
+© 2025 Adnan Rahim. MIT License
