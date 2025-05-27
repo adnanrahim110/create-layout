@@ -1,6 +1,6 @@
 {
   "name": "create-react-layout",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "Interactive CLI to scaffold React component directories & .jsx/.tsx files under src/",
   "main": "index.js",
   "bin": {
