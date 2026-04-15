@@ -1,6 +1,12 @@
 # create-react-layout
 
-Interactive CLI tool to scaffold React component directories and `.jsx`/`.tsx` files under your `src/` folder. `create-react-layout` makes project setup lightning-fast by guiding you through a dynamic folder/file tree builder right in your terminal.
+## What's the pain point?
+
+When starting a React project, building the initial `src/components` structure is repetitive and slow. Creating folders one by one, naming every component correctly, switching between `.jsx` and `.tsx`, and avoiding duplicate files turns simple setup into busy work.
+
+## How do I solve it?
+
+`create-react-layout` is an interactive CLI that scaffolds your React component folders and `.jsx`/`.tsx` files directly inside `src/`. It guides you through the structure in the terminal, normalizes component names, supports both JavaScript and TypeScript, and skips anything that already exists so setup stays fast and safe.
 
 ---
 
@@ -16,7 +22,7 @@ Interactive CLI tool to scaffold React component directories and `.jsx`/`.tsx` f
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/) v14 or higher
+- [Node.js](https://nodejs.org/) v18 or higher
 - npm (bundled with Node.js)
 
 ---
@@ -27,6 +33,12 @@ Install globally from npm:
 
 ```bash
 npm install -g create-react-layout
+```
+
+Install from GitHub Packages:
+
+```bash
+npm install -g @adnanrahim110/create-react-layout
 ```
 
 ---
@@ -100,21 +112,58 @@ src/components/ui ➡ Choose action:
 npm uninstall -g create-react-layout
 ```
 
+To uninstall the GitHub Packages version:
+
+```bash
+npm uninstall -g @adnanrahim110/create-react-layout
+```
+
+---
+
+## Publish To GitHub Packages
+
+GitHub's npm registry requires a scoped package name, so this project keeps the npmjs package as `create-react-layout` and publishes a GitHub Packages version as `@adnanrahim110/create-react-layout`.
+
+1. Create a GitHub personal access token (classic) with `write:packages` and `read:packages`.
+2. Authenticate npm against GitHub Packages:
+
+```bash
+npm login --scope=@adnanrahim110 --auth-type=legacy --registry=https://npm.pkg.github.com
+```
+
+3. Publish to GitHub Packages:
+
+```bash
+npm run publish:github
+```
+
+Dry-run first if you want to preview the package contents:
+
+```bash
+npm run publish:github -- --dry-run
+```
+
+If you need to install the GitHub Packages version in another project, make sure npm knows that the `@adnanrahim110` scope comes from GitHub Packages:
+
+```bash
+@adnanrahim110:registry=https://npm.pkg.github.com
+```
+
+GitHub Packages makes the first published version private by default. You can change package visibility from the package settings on GitHub after the first publish.
+
 ---
 
 ## About Me
 
 **Adnan Rahim** — Full-Stack Web Developer & AI Enthusiast
 
-🎓 B.Sc. in Artificial Intelligence @ KIET University, Karachi
+🎓 B.Sc. in Cyber Security @ Iqra University, Karachi
 💻 Web Development @ Aptech Learning Institute (2021–23)
 🏢 Full-Stack Developer @ Atraa Technologies
 
 **Connect:**
 
 📧 adnankaka.786110@gmail.com
-🌐 GitHub
-🔗 LinkedIn
-📸 Instagram
+🔗 LinkedIn: https://www.linkedin.com/in/adnanrahim110/
 
-© 2025 Adnan Rahim. MIT License
+© 2026 Adnan Rahim. MIT License

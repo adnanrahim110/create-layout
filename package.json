@@ -9,11 +9,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "npm run lint",
-    "lint": "echo \"No lint configured\""
+    "lint": "echo \"No lint configured\"",
+    "publish:github": "node scripts/publish-github-package.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adnanrahim110/create-react-layout.git"
+    "url": "git+https://github.com/adnanrahim110/create-layout.git"
   },
   "keywords": [
     "react",
@@ -33,6 +34,6 @@
     "inquirer": "^12.6.1"
   },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   }
 }
