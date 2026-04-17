@@ -1,39 +1,62 @@
 {
-  "name": "create-react-layout",
-  "version": "2.1.0",
-  "description": "Interactive CLI to scaffold React component directories & .jsx/.tsx files under src/",
-  "main": "index.js",
+  "name": "jsforge",
+  "version": "1.0.0",
+  "description": "Universal JS scaffolding CLI for React, Next.js, Vue, Nuxt, Angular, and Express",
+  "type": "module",
+  "main": "bin/jsforge.js",
   "bin": {
-    "create-react-layout": "index.js"
+    "jsforge": "bin/jsforge.js",
+    "jf": "bin/jsforge.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "npm run lint",
-    "lint": "echo \"No lint configured\"",
+    "test": "echo \"No tests configured\" && exit 0",
     "publish:github": "node scripts/publish-github-package.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adnanrahim110/create-layout.git"
-  },
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "keywords": [
-    "react",
     "cli",
     "scaffold",
-    "components",
+    "generator",
+    "react",
+    "nextjs",
+    "next",
+    "vue",
+    "nuxt",
+    "angular",
+    "express",
+    "node",
     "javascript",
-    "typescript"
+    "typescript",
+    "boilerplate",
+    "component",
+    "hook",
+    "feature"
   ],
   "author": "Adnan Rahim <adnankaka.786110@gmail.com>",
   "license": "MIT",
-  "files": [
-    "index.js"
-  ],
-  "dependencies": {
-    "chalk": "^5.4.1",
-    "inquirer": "^12.6.1"
-  },
   "engines": {
     "node": ">=18"
-  }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.3.2",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adnanrahim110/jsforge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/adnanrahim110/jsforge/issues"
+  },
+  "homepage": "https://github.com/adnanrahim110/jsforge#readme"
 }

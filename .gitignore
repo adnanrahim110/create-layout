@@ -1,2 +1,5 @@
 # dependencies
 node_modules/
+
+# temp build folder (jsforge was scaffolded here, real code is at root)
+jsforge/
