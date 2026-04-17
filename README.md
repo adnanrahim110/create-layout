@@ -3,11 +3,11 @@
 </div>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/jsforge">
-    <img src="https://img.shields.io/npm/v/jsforge?style=for-the-badge&logo=npm&logoColor=white&color=F97316" alt="npm version" />
+  <a href="https://www.npmjs.com/package/jsforge-cli">
+    <img src="https://img.shields.io/npm/v/jsforge-cli?style=for-the-badge&logo=npm&logoColor=white&color=F97316" alt="npm version" />
   </a>
-  <a href="https://www.npmjs.com/package/jsforge">
-    <img src="https://img.shields.io/npm/dm/jsforge?style=for-the-badge&logo=npm&logoColor=white&color=F97316" alt="npm downloads" />
+  <a href="https://www.npmjs.com/package/jsforge-cli">
+    <img src="https://img.shields.io/npm/dm/jsforge-cli?style=for-the-badge&logo=npm&logoColor=white&color=F97316" alt="npm downloads" />
   </a>
   <a href="https://github.com/adnanrahim110/jsforge">
     <img src="https://img.shields.io/badge/GitHub-Repository-0F172A?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
@@ -65,32 +65,32 @@ Install once, use everywhere. jsforge works with every major package manager.
 
 ```bash
 # npm
-npm install -g jsforge
+npm install -g jsforge-cli
 
 # pnpm
-pnpm add -g jsforge
+pnpm add -g jsforge-cli
 
 # yarn
-yarn global add jsforge
+yarn global add jsforge-cli
 
 # bun
-bun add -g jsforge
+bun add -g jsforge-cli
 ```
 
 **Run without installing** (always uses the latest version):
 
 ```bash
 # npm
-npx jsforge
+npx jsforge-cli
 
 # pnpm
-pnpm dlx jsforge
+pnpm dlx jsforge-cli
 
 # yarn (v2+)
-yarn dlx jsforge
+yarn dlx jsforge-cli
 
 # bun
-bunx jsforge
+bunx jsforge-cli
 ```
 
 ---
@@ -396,7 +396,7 @@ Run `jsforge init` once per project to generate this file. Commit it so your who
 
 ```bash
 npm uninstall -g create-react-layout
-npm install -g jsforge
+npm install -g jsforge-cli
 ```
 
 Everything else stays the same. `jsforge` with no arguments drops you straight into the interactive builder, exactly like the original.

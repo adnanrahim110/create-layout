@@ -1,5 +1,5 @@
 {
-  "name": "jsforge",
+  "name": "jsforge-cli",
   "version": "1.0.0",
   "description": "Universal JS scaffolding CLI for React, Next.js, Vue, Nuxt, Angular, and Express",
   "type": "module",
