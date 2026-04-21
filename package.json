@@ -10,7 +10,13 @@
   },
   "scripts": {
     "test": "echo \"No tests configured\" && exit 0",
-    "publish:github": "node scripts/publish-github-package.cjs"
+    "publish:github": "node scripts/publish-github-package.cjs",
+    "release:check-tag": "node scripts/verify-tag-version.cjs",
+    "release:tag": "node scripts/release-tag.cjs",
+    "release": "node scripts/release.cjs patch",
+    "release:patch": "node scripts/release.cjs patch",
+    "release:minor": "node scripts/release.cjs minor",
+    "release:major": "node scripts/release.cjs major"
   },
   "files": [
     "bin",
