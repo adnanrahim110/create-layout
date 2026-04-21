@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "echo \"No tests configured\" && exit 0",
-    "publish:github": "node scripts/publish-github-package.js"
+    "publish:github": "node scripts/publish-github-package.cjs"
   },
   "files": [
     "bin",
@@ -53,10 +53,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adnanrahim110/jsforge.git"
+    "url": "git+https://github.com/adnanrahim110/jsforge-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/adnanrahim110/jsforge/issues"
+    "url": "https://github.com/adnanrahim110/jsforge-cli/issues"
   },
-  "homepage": "https://github.com/adnanrahim110/jsforge#readme"
+  "homepage": "https://github.com/adnanrahim110/jsforge-cli#readme"
 }

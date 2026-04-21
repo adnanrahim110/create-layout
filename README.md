@@ -9,7 +9,7 @@
   <a href="https://www.npmjs.com/package/jsforge-cli">
     <img src="https://img.shields.io/npm/dm/jsforge-cli?style=for-the-badge&logo=npm&logoColor=white&color=F97316" alt="npm downloads" />
   </a>
-  <a href="https://github.com/adnanrahim110/jsforge">
+  <a href="https://github.com/adnanrahim110/jsforge-cli">
     <img src="https://img.shields.io/badge/GitHub-Repository-0F172A?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
   </a>
   <img src="https://img.shields.io/badge/Node-18%2B-14B8A6?style=for-the-badge&logo=node.js&logoColor=white" alt="Node 18+" />
